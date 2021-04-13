@@ -1,0 +1,5 @@
+DATABASE_URL="postgresql://purvi@localhost:5432/capstone"
+AUTH0_DOMAIN="purvi-udacity.us.auth0.com"
+ALGORITHMS="['RS256']"
+API_AUDIENCE="capstone_api"
+DATABASE_TEST_URL="postgresql://purvi@localhost:5432/capstone_test"
