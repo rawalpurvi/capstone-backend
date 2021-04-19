@@ -102,19 +102,18 @@ class Movie(db.Model):
         db.session.commit()
 
     def format(self):
-        # Get all actors detail
-        all_actors = []
-        all_actors_info = Actor.query.order_by(Actor.id).all()
-        all_actors = [all_actor.format() for all_actor in all_actors_info]
-
         # Get actor detais for the movie
         selected_actors = []
         actors_info = db.session.query(
-            Actor.id).filter(
+            Actor.id,Actor.name).filter(
             Movie_Actor.movie_id == self.id,
             Movie_Actor.actor_id == Actor.id).order_by(
             Actor.id).all()
-        selected_actors = [str(actor.id) for actor in actors_info]
+        for actor in actors_info:
+            selected_actors.append({
+                "id": actor.id,
+                "name": actor.name
+            })
 
         # set release date in format
         formatDate = "EEEE, dd MMMM YYYY"
@@ -125,8 +124,7 @@ class Movie(db.Model):
             'id': self.id,
             'title': self.title,
             'release_date': format_release_date,
-            'selected_actors': selected_actors,
-            'all_actors': all_actors
+            'selected_actors': selected_actors
         }
 
 

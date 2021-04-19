@@ -1,4 +1,4 @@
-# Capstone Backend
+# Capstone-Backend API
 
 ## Getting Started
 
@@ -75,7 +75,7 @@ The `--reload` flag will detect file changes and restart the server automaticall
 5. Create new API permissions:
     - `delete:actors`
     - `delete:movies`
-    - `get:actors`
+    - `get:actors`: curl https://capstone-agency-backend.herokuapp.com/actors
     - `get:movies`
     - `patch:actors`
     - `patch:movies`

@@ -15,6 +15,22 @@ def create_app(test_config=None):
 
     '''
     @ADD:
+    Create an endpoint to handle GET request
+    for API.
+    '''
+    # API Start
+    @app.route('/', methods=['GET'])
+    def get_api():
+        # Put Message
+        message = "This is the Capstone API!!!"
+        # retrun array of actors details
+        return jsonify({
+            'success': True,
+            'message': message
+        })
+
+    '''
+    @ADD:
     Create an endpoint to handle GET requests
     for actors.
     '''
