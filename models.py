@@ -105,7 +105,7 @@ class Movie(db.Model):
         # Get actor detais for the movie
         selected_actors = []
         actors_info = db.session.query(
-            Actor.id,Actor.name).filter(
+            Actor.id, Actor.name).filter(
             Movie_Actor.movie_id == self.id,
             Movie_Actor.actor_id == Actor.id).order_by(
             Actor.id).all()

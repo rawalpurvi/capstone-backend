@@ -207,7 +207,7 @@ def create_app(test_config=None):
 
             return jsonify({
                 'success': True,
-                'drinks': [updated_movie]
+                'movie': [updated_movie]
             })
 
         except BaseException:
