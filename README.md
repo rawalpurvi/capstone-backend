@@ -105,7 +105,7 @@ The `--reload` flag will detect file changes and restart the server automaticall
     - Request Arguments: None
     - Returns: An object actors with all the actors with id, name, age, gender.
     - curl https://capstone-agency-backend.herokuapp.com/actors
-    {
+    - {
         "actors":[
                 {
                     "age":55,
@@ -118,7 +118,7 @@ The `--reload` flag will detect file changes and restart the server automaticall
         :
         ],
         "success":true
-    }
+     }
 
 2. Post Actor
 
@@ -128,7 +128,7 @@ The `--reload` flag will detect file changes and restart the server automaticall
     - Returns: An object actors with all the actors with id, name, age, gender.
     - curl -X POST  -H "Content-Type:application/json" -H "Authorization: Bearer $DIRECTOR_TOKEN" https://capstone-agency-backend.herokuapp.com/actors 
        -d '{"name":"Kristin Stewart","age":31,"gender":"Female"}'
-    {
+    - {
         "actors":{
             "age":31,
             "gender":"Female",
@@ -136,7 +136,7 @@ The `--reload` flag will detect file changes and restart the server automaticall
             "name":"Kristin Stewart"
         },
         "success":true
-    }
+      }
 
 3. Update Actor
 
@@ -146,7 +146,7 @@ The `--reload` flag will detect file changes and restart the server automaticall
     - Returns: An object actor with id, name, age, gender.
     - curl -X PATCH https://capstone-agency-backend.herokuapp.com/actors/8 -H"Content-Type: application/json" -H "Authorization: Bearer $DIRECTOR_TOKEN"
        -d "{\"name\":\"Angie\",\"age\":22}"
-    {
+    - {
         "actors":[
             {
                 "age":22,
@@ -156,7 +156,7 @@ The `--reload` flag will detect file changes and restart the server automaticall
             }
         ]
         ,"success":true
-    }
+      }
 
 4. Delete Actor
 
@@ -167,10 +167,10 @@ The `--reload` flag will detect file changes and restart the server automaticall
     - curl -X DELETE  -H "Content-Type:application/json" -H 
        "Authorization:Bearer $DIRECTOR_TOKEN" 
        https://capstone-agency-backend.herokuapp.com/actors/15
-    {
+    - {
         "success": True,
         "delete": 15
-    }
+      }
 
 5. Get Movies
 
@@ -178,7 +178,7 @@ The `--reload` flag will detect file changes and restart the server automaticall
     - Fetches all movies with detail: id, release_date, selected_actors, title.
     - Request Arguments: None
     - curl https://capstone-agency-backend.herokuapp.com/movies
-    {
+    - {
         "movies":[
             {
                 "id":1,
@@ -200,7 +200,7 @@ The `--reload` flag will detect file changes and restart the server automaticall
             :
         ],
         "success":true
-    }
+      }
 
 6. POST Movie
 
@@ -211,7 +211,7 @@ The `--reload` flag will detect file changes and restart the server automaticall
     - curl -X POST  -H "Content-Type:application/json" -H "Authorization:
              Bearer $PRODUCER_TOKEN" https://capstone-agency-backend.herokuapp.com/movies
              -d '{"title":"Captain Marvel", "release_date": "2019-03-04"}'
-    {
+    - {
         "movies":[
             {
                 "id":1,
@@ -221,7 +221,7 @@ The `--reload` flag will detect file changes and restart the server automaticall
             },
         ],
         "success":true
-    }
+      }
 
 7. Assign actors to the movie
 
@@ -232,7 +232,7 @@ The `--reload` flag will detect file changes and restart the server automaticall
     - curl -X PATCH https://capstone-agency-backend.herokuapp.com/movies/16 -H 
        "Content-Type: application/json" -H "Authorization: Bearer $DIRECTOR_TOKEN" 
        -d "{\"selected_actors\":[\"8\",\"9\"]}"
-    {
+    - {
         "movie":[
             {
                 "id":6,
@@ -251,7 +251,7 @@ The `--reload` flag will detect file changes and restart the server automaticall
             }
         ],
         "success":true
-    }
+      }
 
 8. Delete Movie
 
@@ -261,10 +261,10 @@ The `--reload` flag will detect file changes and restart the server automaticall
     - Returns: An object delete with movie_id.
     - curl -X DELETE  -H "Content-Type:application/json" -H "Authorization:Bearer
        $PRODUCER_TOKEN" https://capstone-agency-backend.herokuapp.com/movies/18
-    {
+    - {
         "success": True,
         "delete": 18
-    }
+      }
 
 
 ## Error Handling
