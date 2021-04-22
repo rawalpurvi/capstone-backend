@@ -56,7 +56,7 @@ python3 test_app.py
 
 ## Running the server
 
-From within the `./backend` directory first ensure you are working using your created virtual environment.
+From within the directory first ensure you are working using your created virtual environment.
 
 Each time you open a new terminal session, run:
 
