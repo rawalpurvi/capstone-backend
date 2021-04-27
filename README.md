@@ -40,7 +40,7 @@ This will install all of the required packages we selected within the `requireme
 - [jose](https://python-jose.readthedocs.io/en/latest/) JavaScript Object Signing and Encryption for JWTs. Useful for encoding, decoding, and verifying JWTS.
 
 ## Database Setup
-With Postgres running, restore a database using the capstone.psql file provided. From the backend folder in terminal run:
+With Postgres running, restore a database using the capstone.psql file provided. From the folder in terminal run:
 ```bash
 psql capstone < capstone.psql
 ```
@@ -299,4 +299,4 @@ Files are used to work the server.
 Purvi Rawal
 
 ### Acknoledgemnts
-Udacity team for making a greate nenodegree program for Full Stack Developer.
+Udacity team for making a greate Nanodegree program for Full Stack Developer.
